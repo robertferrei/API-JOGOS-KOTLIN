@@ -1,4 +1,6 @@
 package br.com.alugames.modelo
+import org.example.br.com.alugames.modelo.Jogo
+import java.util.Scanner
 import kotlin.random.Random
 
 //cadastros
@@ -13,6 +15,7 @@ data class Gamer(var nome:String, var email:String){
         }
      var idInterno:String? = null
          private set //conseguimos  usar esse valor para visualização porem nao podemos estar alterando
+    val jogosBuscados = mutableListOf<Jogo?>() //criando uma lista para busca de jogos e passando ${jogo?} <<-- pode ser nulo
 
     //CONSTRUTOR
     constructor(nome: String,email: String,dataNascimento:String, usuario:String):this(nome, email) {//criando um construtor
@@ -44,6 +47,27 @@ data class Gamer(var nome:String, var email:String){
         }
         else{
         throw IllegalArgumentException("email invalido") //A palavra reservada throw dispara um erro criado pelo programa em tempo de execução
+        }
+    }
+    companion object{ //criando esse objeto para que possa ser executado na main principal
+        fun criarGAMER(leitura:Scanner): Gamer{
+            println("Boas vindas ao ROGAMES! Vamos fazer seu cadastro. Digite seu nome:")
+            val nome = leitura.nextLine()
+            println("Digite seu e-mail:")
+            val email = leitura.nextLine()
+            println("Deseja completar seu cadastro com usuário e data de nascimento? (S/N)")
+            val opcao = leitura.nextLine()
+
+            if (opcao.equals("s", ignoreCase = true)) {
+                println("Digite sua data de nascimento(DD/MM/AAAA):")
+                val nascimento = leitura.nextLine()
+                println("Digite seu nome de usuário:")
+                val usuario = leitura.nextLine()
+
+                return  Gamer(nome, email,nascimento,usuario)
+            }else{
+                return  Gamer(nome, email)
+            }
         }
     }
 }
