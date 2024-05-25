@@ -2,10 +2,13 @@ package br.com.alugames.servicos
 
 import br.com.alugames.modelo.Gamer
 import br.com.alugames.modelo.InfoGAMERJSON
+import br.com.alugames.modelo.InfoJogoJson
 import br.com.alugames.utilitario.criaGamer
+import br.com.alugames.utilitario.criaJogo
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import org.example.br.com.alugames.modelo.InfoJogo
+import org.example.br.com.alugames.modelo.Jogo
 import java.net.URI
 import java.net.http.HttpClient
 import java.net.http.HttpRequest
@@ -50,4 +53,18 @@ class CosnumoApi {
         return listaGamerConvertida
 
     }
+
+    fun buscaJogosJson(): List<Jogo> {
+        val endereco = "https://raw.githubusercontent.com/jeniblodev/arquivosJson/main/jogos.json"
+        val json = consumoDadosApi(endereco)
+
+        val gson = Gson()
+        val meuJogoTipo = object : TypeToken<List<InfoJogoJson>>() {}.type
+        val listaJogo: List<InfoJogoJson> = gson.fromJson(json, meuJogoTipo)
+
+        val listaJogoConvertida = listaJogo.map{ infoJogoJson -> infoJogoJson.criaJogo() }
+
+        return listaJogoConvertida
+    }
+
 }

@@ -33,6 +33,8 @@ data class Gamer(var nome:String, var email:String){
     override fun toString(): String {
         return "Gamer(nome='$nome', email='$email', dataNascimento=$dataNascimento, usuario=$usuario, idInterno=$idInterno)"
     }
+
+    //criando idEnterno
     fun criarIdInterno(){
         val numero = Random.nextInt(1000)
         val tag = String.format("#04d",numero)
