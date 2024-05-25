@@ -1,5 +1,6 @@
 package br.com.alugames.modelo
 import org.example.br.com.alugames.modelo.Jogo
+import java.time.LocalDate
 import java.util.Scanner
 import kotlin.random.Random
 
@@ -22,14 +23,14 @@ data class Gamer(var nome:String, var email:String){
          this.dataNascimento = dataNascimento
          this.usuario =usuario
          criarIdInterno()
-
     }
+    //validações
     init { //executar algum bloco de código antes de inicializar a classe
         if (nome.isNullOrBlank()){
             throw IllegalArgumentException("nome esta em branco")
         }
         this.email =validadarEmail()
-    }
+    }// fim validações
     override fun toString(): String {
         return "Gamer(nome='$nome', email='$email', dataNascimento=$dataNascimento, usuario=$usuario, idInterno=$idInterno)"
     }
@@ -40,7 +41,9 @@ data class Gamer(var nome:String, var email:String){
         val tag = String.format("#04d",numero)
 
         this.idInterno = "$usuario#$tag " //passando id interno para formatação
-    }
+    }//fim criação id interno
+
+    //validação de email
     fun validadarEmail(): String{
         val regex = Regex(pattern = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$")
 
@@ -50,6 +53,10 @@ data class Gamer(var nome:String, var email:String){
         else{
         throw IllegalArgumentException("email invalido") //A palavra reservada throw dispara um erro criado pelo programa em tempo de execução
         }
+    }//fim validação email
+
+    fun alugaJogo(jogo: Jogo,dataInicial:LocalDate,dataFinal:LocalDate): Aluguel{
+        return  Aluguel(this,jogo,dataInicial,dataFinal)
     }
     companion object{ //criando esse objeto para que possa ser executado na main principal
         fun criarGAMER(leitura:Scanner): Gamer{

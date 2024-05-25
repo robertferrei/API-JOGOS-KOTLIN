@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8711dbe3-ccc8-4acb-b2c1-f19b49290282" name="Changes" comment="refatorando  o consumo Da API">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alugames/modelo/InfoJogoJson.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alugames/utilitario/JogoExtension.kt" afterDir="false" />
+    <list default="true" id="8711dbe3-ccc8-4acb-b2c1-f19b49290282" name="Changes" comment="criando infoJogo e trabalhando com construtoes">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alugames/modelo/Aluguel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/alugames/modelo/Jogo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alugames/modelo/Jogo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/alugames/modelo/Gamer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alugames/modelo/Gamer.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/alugames/principal/testeJson.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alugames/principal/testeJson.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/alugames/servicos/CosnumoApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alugames/servicos/CosnumoApi.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
-        <option value="Kotlin Data Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Data Class" />
       </list>
     </option>
   </component>
@@ -143,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716662829043</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="criando infoJogo e trabalhando com construtoes">
+      <option name="closed" value="true" />
+      <created>1716665482434</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716665482434</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,7 +184,8 @@
     <MESSAGE value="comitando projeto" />
     <MESSAGE value="criando gamerJSon e testes" />
     <MESSAGE value="refatorando  o consumo Da API" />
-    <option name="LAST_COMMIT_MESSAGE" value="refatorando  o consumo Da API" />
+    <MESSAGE value="criando infoJogo e trabalhando com construtoes" />
+    <option name="LAST_COMMIT_MESSAGE" value="criando infoJogo e trabalhando com construtoes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
