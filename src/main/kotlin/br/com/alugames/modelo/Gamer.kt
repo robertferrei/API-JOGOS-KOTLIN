@@ -16,7 +16,9 @@ data class Gamer(var nome:String, var email:String){
         }
      var idInterno:String? = null
          private set //conseguimos  usar esse valor para visualização porem nao podemos estar alterando
+
     val jogosBuscados = mutableListOf<Jogo?>() //criando uma lista para busca de jogos e passando ${jogo?} <<-- pode ser nulo
+    val jogosALugados = mutableListOf<Aluguel>()
 
     //CONSTRUTOR
     constructor(nome: String,email: String,dataNascimento:String, usuario:String):this(nome, email) {//criando um construtor
@@ -55,9 +57,21 @@ data class Gamer(var nome:String, var email:String){
         }
     }//fim validação email
 
-    fun alugaJogo(jogo: Jogo,dataInicial:LocalDate,dataFinal:LocalDate): Aluguel{
-        return  Aluguel(this,jogo,dataInicial,dataFinal)
-    }
+    //Aluguel
+    fun alugaJogo(jogo: Jogo,periodo: Periodo): Aluguel{
+        val aluguel= Aluguel(this,jogo,periodo)
+        jogosALugados.add(aluguel)
+
+        return aluguel
+    }//fim Aluguel
+
+    //criando um filtro de aluguel de games por mes
+    fun jogosDoMes(mes:Int): List<Jogo>{
+        return  jogosALugados
+            .filter {aluguel ->aluguel.periodo.dataInicial.monthValue == mes }
+            .map {aluguel -> aluguel.jogo}
+    }//fim filtro de aluguel
+
     companion object{ //criando esse objeto para que possa ser executado na main principal
         fun criarGAMER(leitura:Scanner): Gamer{
             println("Boas vindas ao ROGAMES! Vamos fazer seu cadastro. Digite seu nome:")
