@@ -17,7 +17,7 @@ data class Gamer(var nome:String, var email:String){
      var idInterno:String? = null
          private set //conseguimos  usar esse valor para visualização porem nao podemos estar alterando
 
-    var plano:PlanoAvulso = PlanoAvulso("BRONZE")
+    var plano:Plano = PlanoAvulso("BRONZE")
 
     val jogosBuscados = mutableListOf<Jogo?>() //criando uma lista para busca de jogos e passando ${jogo?} <<-- pode ser nulo
     val jogosALugados = mutableListOf<Aluguel>()
