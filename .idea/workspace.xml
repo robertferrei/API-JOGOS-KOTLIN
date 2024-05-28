@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8711dbe3-ccc8-4acb-b2c1-f19b49290282" name="Changes" comment="criando filtro para aluguel">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alugames/modelo/PlanoAvulso.kt" afterDir="false" />
+    <list default="true" id="8711dbe3-ccc8-4acb-b2c1-f19b49290282" name="Changes" comment="criando plano avulso">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alugames/modelo/Plano.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alugames/modelo/PlanoAssinatura.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/alugames/principal/testeJson.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alugames/principal/testeJson.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/alugames/modelo/PlanoAvulso.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alugames/modelo/PlanoAvulso.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
-        <option value="Kotlin File" />
         <option value="Kotlin Data Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -164,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716737788294</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="criando plano avulso">
+      <option name="closed" value="true" />
+      <created>1716858247845</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716858247845</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -202,7 +211,8 @@
     <MESSAGE value="criando infoJogo e trabalhando com construtoes" />
     <MESSAGE value="criando aluguel" />
     <MESSAGE value="criando filtro para aluguel" />
-    <option name="LAST_COMMIT_MESSAGE" value="criando filtro para aluguel" />
+    <MESSAGE value="criando plano avulso" />
+    <option name="LAST_COMMIT_MESSAGE" value="criando plano avulso" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
